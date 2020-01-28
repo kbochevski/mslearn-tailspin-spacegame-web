@@ -37,8 +37,9 @@ steps:
   workingDirectory: $(wwwrootDir)
 
 - task: NuGetCommand@2
+  displayName: 'restore project dependencies'
   inputs:
-    command: 'restore project dependencies'
+    command: 'restore'
     restoreSolution: '**/*.sln'
     feedsToUse: 'select'
     vstsFeed: '6f80aae2-9cad-4f2b-a261-56d35091b0e7/860b216b-4a37-4cbe-b22c-7d55dad274a4'
